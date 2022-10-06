@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Codewitharjunsbuv20210808Application",
+            "request": "launch",
+            "mainClass": "com.codewitharjun.codewitharjunsbuv20210808.Codewitharjunsbuv20210808Application",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloApplication",
+            "request": "launch",
+            "mainClass": "com.codewitharjunsbuv20210808.hello.HelloApplication",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch DemoApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.DemoApplication",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HelloApplication<hello>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.codewitharjunsbuv20210808.hello.HelloApplication",
+            "projectName": "hello",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
