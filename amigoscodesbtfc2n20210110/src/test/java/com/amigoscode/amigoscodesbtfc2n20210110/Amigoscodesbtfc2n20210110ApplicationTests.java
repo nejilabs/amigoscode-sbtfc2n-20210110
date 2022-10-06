@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.amigoscode.amigoscodesbtfc2n20210110;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class Amigoscodesbtfc2n20210110ApplicationTests {
 
 	@Test
 	void contextLoads() {
