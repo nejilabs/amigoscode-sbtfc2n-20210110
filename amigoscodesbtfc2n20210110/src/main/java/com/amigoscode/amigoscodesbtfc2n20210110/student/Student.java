@@ -1,6 +1,7 @@
 package com.amigoscode.amigoscodesbtfc2n20210110.student;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 
 // START: STUDENT CLASS = = = = = = = =
@@ -30,6 +32,7 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob; //Date of Birth
+    @Transient
     private Integer age;
     // End: Attributes - - - - - - - - - -
 
@@ -41,26 +44,22 @@ public class Student {
         Long id, 
         String name, 
         String email, 
-        LocalDate dob, 
-        Integer age
+        LocalDate dob
     ) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
     }
 
     public Student(
         String name, 
         String email, 
-        LocalDate dob, 
-        Integer age
+        LocalDate dob
     ) {
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
     }
     // End: Constructors - - - - - - - - - -
 
@@ -99,7 +98,7 @@ public class Student {
 
     // Getter and Setter for Integer age
     public Integer getAge(){
-        return age;
+        return Period.between(this.dob, LocalDate.now()).getYears();
     }
     public void setAge(Integer age){
         this.age = age;
